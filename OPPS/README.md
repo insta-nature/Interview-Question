@@ -204,7 +204,7 @@ public class D extends B{}
             }
         }
         ```
-### 5] Constructoors in Java
+### 5] Constructor in Java
 - _In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling the constructor, memory for the object is allocated in the memory. It is a special type of method which is used to initialize the object. Every time an object is created using the new() keyword, at least one constructor is called._
 - ### _Note: It is not necessary to write a constructor for a class. It is because java compiler creates a default constructor if your class doesn’t have any._
     ```java
@@ -274,3 +274,130 @@ public class D extends B{}
             }
         }
         ```
+### 6] Abstraction in Java.
+- _Data Abstraction is the property by virtue of which only the essential details are displayed to the user. The trivial or non-essential units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components._
+- _Consider a real-life example of a man driving a car. The man only knows that pressing the accelerators will increase the car speed or applying brakes will stop the car, but he does not know how on pressing the accelerator, the speed is actually increasing. He does not know about the inner mechanism of the car or the implementation of the accelerators, brakes etc. in the car. This is what abstraction is._
+> ### Interface already Abstract
+```java
+// A simple interface
+interface Player
+{
+    int id = 10; // public + static + final
+    int move(); // static abstract
+}
+```
+> ### Class Defined Abstract
+```java
+abstract class Shape 
+{
+    int color;
+    // An abstract function
+    abstract void draw();
+}
+```
+
+### 7] Encapsulation in java
+_It is defined as the wrapping up of data under a single unit. It is the mechanism that binds together the code and the data it manipulates. Another way to think about encapsulation is that it is a protective shield that prevents the data from being accessed by the code outside this shield._
+
+- Technically, in encapsulation, the variables or the data in a class is hidden from any other class and can be accessed only through any member function of the class in which they are declared.
+- In encapsulation, the data in a class is hidden from other classes, which is similar to what data-hiding does. So, the terms “encapsulation” and “data-hiding” are used interchangeably.
+- Encapsulation can be achieved by declaring all the variables in a class as private and writing public methods in the class to set and get the values of the variables.
+
+### 8] Overriding and Overloading.
+> ### Overriding in java.
+    Overriding is a Same name with Different value.
+```java
+class Parent { 
+    void show() 
+    { 
+        System.out.println("Parent's show()"); 
+    } 
+} 
+  
+// Inherited class 
+class Child extends Parent { 
+    // This method overrides show() of Parent 
+    @Override
+    void show() 
+    { 
+        System.out.println("Child's show()"); 
+    } 
+} 
+  
+// Driver class 
+class Main { 
+    public static void main(String[] args) 
+    { 
+        // If a Parent type reference refers 
+        // to a Parent object, then Parent's 
+        // show is called 
+        Parent obj1 = new Parent(); 
+        obj1.show(); 
+  
+        // If a Parent type reference refers 
+        // to a Child object Child's show() 
+        // is called. This is called RUN TIME 
+        // POLYMORPHISM. 
+        Parent obj2 = new Child(); 
+        obj2.show(); 
+    } 
+} 
+```
+
+> ### Overloading in Java.
+    Overloading is a Same name with Different parameter.
+
+    Method Overloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameters or type of input parameters, or a mixture of both.
+```java
+import java.io.*; 
+
+// Class 1 
+// Helper class 
+class Product { 
+
+	// Method 1 
+	// Multiplying two integer values 
+	public int multiply(int a, int b) 
+	{ 
+		int prod = a * b; 
+		return prod; 
+	} 
+
+	// Method 2 
+	// Multiplying three integer values 
+	public int multiply(int a, int b, int c) 
+	{ 
+		int prod = a * b * c; 
+		return prod; 
+	} 
+} 
+
+// Class 2 
+// Main class 
+class Overloading{ 
+
+	// Main driver method 
+	public static void main(String[] args) 
+	{ 
+
+		// Creating object of above class inside main() 
+		// method 
+		Product ob = new Product(); 
+
+		// Calling method to Multiply 2 numbers 
+		int prod1 = ob.multiply(1, 2); 
+
+		// Printing Product of 2 numbers 
+		System.out.println( 
+			"Product of the two integer value :" + prod1); 
+
+		// Calling method to multiply 3 numbers 
+		int prod2 = ob.multiply(1, 2, 3); 
+
+		// Printing product of 3 numbers 
+		System.out.println( 
+			"Product of the three integer value :" + prod2); 
+	} 
+}
+
+```
