@@ -348,7 +348,8 @@ class Main {
 > ### Overloading in Java.
     Overloading is a Same name with Different Parameter.
 
-    Method Overloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameters or type of input parameters, or a mixture of both.
+    Method Overloading allows different methods to have the same name, but different signatures where the signature can differnt 
+    by the number of input parameters or type of input parameters, or a mixture of both.
 ```java
 import java.io.*; 
 
