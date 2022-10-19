@@ -153,6 +153,7 @@ public class D extends B{}
 ### 4] Pollymorephisum in Java.
 - _the pollymorephisum means meny forms. In simple worlds, we can definde polymorephism as the ability of a message to be displayed in more the one form_
 - ### Type of polymorphism
+    - Polymorephism nathig but Same Object Different Behaviour.
     - Compile-time Polymorphism
         - _It is known as static polymorphism. this type of polymorphism is achieved by fuction overloading oprater overloading._
         - ### _NOTE: But Java Dosen't support the Oprater overloading._
@@ -305,7 +306,7 @@ _It is defined as the wrapping up of data under a single unit. It is the mechani
 
 ### 8] Overriding and Overloading.
 > ### Overriding in java.
-    Overriding is a Same name with Different value.
+    Overriding is a Same name with Same Parameter - (Different value).
 ```java
 class Parent { 
     void show() 
@@ -345,7 +346,7 @@ class Main {
 ```
 
 > ### Overloading in Java.
-    Overloading is a Same name with Different parameter.
+    Overloading is a Same name with Different Parameter.
 
     Method Overloading allows different methods to have the same name, but different signatures where the signature can differ by the number of input parameters or type of input parameters, or a mixture of both.
 ```java
